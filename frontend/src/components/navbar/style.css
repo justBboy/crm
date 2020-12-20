@@ -1,0 +1,29 @@
+
+.floating{
+    box-shadow: 0 1px 10px 2px #000;
+}
+
+.navbar-nav{
+    flex-direction: row !important;
+    flex-wrap: wrap;
+}
+
+.nav-item{
+    margin: auto;
+}
+
+.nav-item{
+    margin: 0 2px 2px 0;
+}
+
+@media (max-width: 551px){
+    #navbar-nav{
+        margin-left: 0 !important;
+        justify-content: center;
+    }
+    #home-icon{
+        width: 100%;
+        background-color: var(--third-color);
+        margin-bottom: 10px;
+    }
+}

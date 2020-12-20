@@ -1,0 +1,47 @@
+body{
+    position: relative;
+}
+
+.btn-float{
+    box-shadow: 2px 2px 2px #000 !important;
+}
+
+.btn-icon-notification{
+    background-color: var(--primary-color);
+    transition: all 0.2s ease-in;
+}
+
+.btn-icon-notification:hover{
+    opacity: 0.8;
+}
+
+.btn-icon{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.w-100{
+    width: 100%;
+}
+
+.push-side{
+    margin-left: var(--sidebar-width) !important;
+    transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.list-style-none{
+    list-style: none;
+}
+
+@media (max-width: 830px){
+    .push-side{
+        margin-left: 0 !important;
+    }
+}

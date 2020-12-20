@@ -1,0 +1,20 @@
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #eee;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: var(--secondary-color);
+    z-index: 999;
+    transition: width 0.5s ease-in-out;
+}
+
+@media (max-width: 830px){
+    .sidebar{
+        width: 0;
+    }
+}
