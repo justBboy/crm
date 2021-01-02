@@ -5,7 +5,8 @@ export default () => {
 
     return (
         <div className="sidebar">
-            <h2>hello</h2>
+            <h2 className="header-title">Notifications</h2>
+            <div className="underline bg-light"></div>
         </div>
     )
 }

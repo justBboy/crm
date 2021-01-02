@@ -1,6 +1,8 @@
 
 .floating{
-    box-shadow: 0 1px 10px 2px #000;
+    box-shadow: 0 1px 15px 2px rgba(0,0,0,0.2);
+    background: var(--primary-color)
+
 }
 
 .navbar-nav{
@@ -13,7 +15,11 @@
 }
 
 .nav-item{
-    margin: 0 2px 2px 0;
+    margin: 0 5px 2px 0;
+} 
+#home-icon{
+    background: var(--third-color) !important;
+    color:var(--bg-white) !important;
 }
 
 @media (max-width: 551px){
@@ -23,7 +29,7 @@
     }
     #home-icon{
         width: 100%;
-        background-color: var(--third-color);
         margin-bottom: 10px;
     }
+   
 }
