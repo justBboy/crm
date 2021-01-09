@@ -1,5 +1,8 @@
 body{
     position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 .btn-float{
@@ -38,6 +41,14 @@ body{
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+.btn-danger{
+    color: red !important;
+}
+
+.btn-action{
+    color: yellowgreen !important;
+}
+
 .w-100{
     width: 100%;
 }
@@ -68,4 +79,12 @@ body{
 
 .header-title{
     text-transform: uppercase;
+}
+
+.main-title{
+    text-transform: uppercase;
+    color: var(--text-gray);
+    font-size: larger;
+    font-weight: 800;
+    margin: 30px 0;
 }

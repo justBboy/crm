@@ -1,0 +1,35 @@
+
+.modal{
+    position: absolute;
+    max-width: 1000px;
+    width: 80%;
+    top: calc(50% - 200px);
+    left: calc(50% - 40%);
+    text-align: center;
+}
+
+@media (max-width: 100px){
+    .modal{
+        max-width: 700px;
+    }
+}
+
+.btn-submit{
+    background-color: var(--main-color) !important;
+    margin-top: 10px;
+}
+
+.modal-form{
+    background-color: #fff;
+    width: 300px;
+    padding: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.modal-form input{
+    margin: 20px 4px !important;
+}

@@ -1,0 +1,39 @@
+.table-content{
+    max-width: 100%;
+    overflow-x: scroll;
+    position: relative;
+}
+
+.container{
+    margin-top: 50px !important;
+}
+
+.MuiTableHead-root{
+    background-color: #027581 !important;
+}
+
+.full-link{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.2s ease-in-out;
+}
+
+.table-data{
+    transition: all 0.2s ease-in !important;    
+}
+
+.table-data:hover{
+    background-color: #ddd !important;
+}
+
+.table-add-btn{
+    position: absolute !important;
+    right: 0 !important;
+    background-color: yellowgreen !important;
+}
+
+.table-add-btn:hover{
+    background-color: greenyellow !important;
+}
