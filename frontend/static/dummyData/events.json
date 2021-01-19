@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Reactjs Conference",
+        "date": "3rd March 2021"
+    },
+    {
+        "id": 2,
+        "title": "Django channels conference",
+        "date": "8th March 2021"
+    },
+    {
+        "id": 3,
+        "title": "Google Talk",
+        "date": "18th January 2021"
+    }
+]

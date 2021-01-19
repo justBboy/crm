@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "make beaudeo app's backend",
+        "start_date": "18th January 2021",
+        "end_date": "25th January 2021",
+        "status": "not started"
+    },
+    {
+        "id": 2,
+        "title": "make dummy data generator app",
+        "start_date": "24th January 2021",
+        "end_date": "2nd March 2021",
+        "status":"not started"
+    }
+]

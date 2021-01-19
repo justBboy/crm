@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Asare Gideon",
+        "work": "Software developer",
+        "phone_number": "0542638310",
+        "company": "aimless"
+    },
+    {
+        "id": 2,
+        "name": "Waja Benjamin",
+        "work": "Video Editor",
+        "phone_number": "0593465380",
+        "company": "aimless"
+    }
+]

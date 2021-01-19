@@ -1,8 +1,12 @@
 .main-signup{
     position: relative;
-    left: 240px;
+    left: 0;
     right: 0;
-    width: calc(100% - 240px);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #f1f5f9; 
     transition: all .5s ease;
 }
@@ -12,13 +16,7 @@
     width: calc(100% - 60px);
     transition: .5s ease;
 }
-.main-signup main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 90vh;
-}
+
 .form-container{
     background: #fff;
     width: 400px;
@@ -90,14 +88,6 @@ form a{
     
 }
 
-
-@media only screen and (max-width:1000px){
-    .main-signup{
-        position: relative;
-        left: 60px;
-        width: calc(100% - 60px);
-    }
-}
 @media only screen and (max-width:500px){
     .form-container{
         width: 300px;

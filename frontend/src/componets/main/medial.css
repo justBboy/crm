@@ -1,57 +1,55 @@
 @media only screen and (max-width:1000px){
- .sidebar{
-     width: 60px;
-     z-index: 200;
- }
- .main-content{
-    left: 60px;
-    width: calc(100% - 60px);
-    
- }
- #reduce{
-    width: 240px !important;
-    padding-top: 1rem;
-    transition: .5s;
-}
- .search-content header{
-     left: 60px;
- }
-  .sidebar .sidebar-header h3 span,
-.sidebar li span:last-child,
- .sidebar .sidebar-header .name{
-    display: none;
-}
- .sidebar .sidebar-header,
- .sidebar li{
-    display: flex;
-    justify-content: center;
-}
-#sidebar-toggle:checked ~ .sidebar {
-    width: 240px;
-}
-
-
-#sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span:last-child,
-#sidebar-toggle:checked ~ .sidebar li span:last-child,
-#sidebar-toggle:checked ~ .sidebar .sidebar-header .name{
-    display: initial;
-}
-#sidebar-toggle:checked ~ .sidebar .sidebar-header{
-    display: flex;
-    justify-content: space-around;
-}
-
-#sidebar-toggle:checked ~ .sidebar li{
-    display: block;
-}
-.chat-container{
-    position: relative;
-    left: 60px;
-    width: calc(100% - 60px);
-
-}
-
-}
+    .sidebar{
+        width: 60px;
+        z-index: 200;
+    }
+    .main-content{
+       left: 60px;
+       width: calc(100% - 60px);
+       
+    }
+    #reduce{
+       width: 240px !important;
+       padding-top: 1rem;
+       transition: .5s;
+   }
+   
+     .sidebar .sidebar-header h3 span,
+   .sidebar li span:last-child,
+    .sidebar .sidebar-header .name{
+       display: none;
+   }
+    .sidebar .sidebar-header,
+    .sidebar li{
+       display: flex;
+       justify-content: center;
+   }
+   #sidebar-toggle:checked ~ .sidebar {
+       width: 240px;
+   }
+   
+   
+   #sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span:last-child,
+   #sidebar-toggle:checked ~ .sidebar li span:last-child,
+   #sidebar-toggle:checked ~ .sidebar .sidebar-header .name{
+       display: initial;
+   }
+   #sidebar-toggle:checked ~ .sidebar .sidebar-header{
+       display: flex;
+       justify-content: space-around;
+   }
+   
+   #sidebar-toggle:checked ~ .sidebar li{
+       display: block;
+   }
+   .chat-container{
+       position: relative;
+       left: 60px;
+       width: calc(100% - 60px);
+   
+   }
+   
+   }
 @media only screen and (max-width:800px){
     .dash-cards{
         grid-template-columns: repeat(2,1fr);

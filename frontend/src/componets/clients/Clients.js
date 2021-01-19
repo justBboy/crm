@@ -1,29 +1,30 @@
 import React from 'react'
+import useGetTableData from '../../effects/useGetTableData';
+import { getTitles } from '../../utils';
 import Table from '../table/Table';
+import Filterer from '../utils/Filterer';
 
 //css
 import './Clients.css';
 
 function Clients() {
+    const tableData = useGetTableData("/static/dummyData/clients.json");
+
+    const titles = getTitles(tableData);
     return (
         <div className="main-content">
-           <h2 className="main-title">Clients</h2> 
-            <Table 
-                tableTitles={['name', 'work', 'phone_number', 'company']} 
-                tableBody={[
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'},
-                    {name: 'Gideon', work: 'Software Developer', phone_number: '0542638391', company: 'Aimless'}
-                ]}
+        <main>
+             <h2 className="main-title client-title">Clients</h2> 
+             <Filterer items={titles ? titles : []}/>
+             <div className="client-table">
+                  <Table 
+                tableTitles={titles ? titles : []} 
+                tableBody={tableData}
             />
+             </div>
+           
+        </main>
+          
         </div>
     )
 }

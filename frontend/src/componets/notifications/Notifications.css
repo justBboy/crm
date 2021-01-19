@@ -1,9 +1,6 @@
-.popper{
-    z-index: 9999;
-}
 
 .notification-container{
-    width: 100%;
+    width: 300px;
     margin: 10px 2px;
     padding: 8px;
     cursor: pointer;

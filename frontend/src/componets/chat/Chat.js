@@ -5,6 +5,7 @@ import user3 from '../images/user-1.png'
 import CallIcon from '@material-ui/icons/Call';
 import InfoIcon from '@material-ui/icons/Info';
 import SendIcon from '@material-ui/icons/Send';
+import { AttachFile } from '@material-ui/icons';
 
 function Chat() {
     const [change,setChange] = useState(false);
@@ -99,9 +100,6 @@ function Chat() {
 
                       </div>
                      </div>
-                     
-                     
-                     
                   </div>
 
                <div className="sub-container" id={change ? "cont-display" : ""}>
@@ -202,7 +200,7 @@ function Chat() {
                     </div>
                     <div className="chat-input">
                         <input type="text" placeholder="write message..." /> <span className="open"><SendIcon /></span>
-                     
+                        <span className="open"><AttachFile /></span>
                     </div>
                     
                 </div>

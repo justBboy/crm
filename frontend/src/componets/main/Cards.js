@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import CachedIcon from '@material-ui/icons/Cached';
 import MarkunreadMailboxIcon from '@material-ui/icons/MarkunreadMailbox';
@@ -18,7 +17,7 @@ function Cards() {
                       </div>
                   </div>
                   <div className="card-footer">
-                      <Link>View all</Link>
+                      <a href="#">View all</a>
                   </div>
               </div>
               <div className="card-single">
@@ -30,7 +29,7 @@ function Cards() {
                       </div>
                   </div>
                   <div className="card-footer">
-                      <Link>View all</Link>
+                      <a href="#">View all</a>
                   </div>
               </div>
               <div className="card-single">
@@ -42,7 +41,7 @@ function Cards() {
                       </div>
                   </div>
                   <div className="card-footer">
-                      <Link>View all</Link>
+                      <a href="#">View all</a>
                   </div>
               </div>
           </div> 

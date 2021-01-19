@@ -1,19 +1,4 @@
 
-.modal{
-    position: absolute;
-    max-width: 1000px;
-    width: 80%;
-    top: calc(50% - 200px);
-    left: calc(50% - 40%);
-    text-align: center;
-}
-
-@media (max-width: 100px){
-    .modal{
-        max-width: 700px;
-    }
-}
-
 .btn-submit{
     background-color: var(--main-color) !important;
     margin-top: 10px;
@@ -30,6 +15,19 @@
     align-self: center;
 }
 
-.modal-form input{
-    margin: 20px 4px !important;
+.modal-form .MuiInputBase-root{
+    margin: 30px 20px;
+}
+
+.modal-form .MuiButtonBase-root{
+    margin-top: 20px !important;
+}
+
+.modal-form .MuiFormControl-root label{
+    margin-left: 20px;
+}
+
+.modal .close-btn{
+    position: fixed !important;
+    right: 0 !important;
 }

@@ -371,7 +371,7 @@ tbody tr:nth-child(even){
     background: transparent;
     padding-top: .5rem;
     color: var(--main-color);
-    
+    cursor: pointer;
 }
 /* .bottom-icons{
     float: left;
@@ -480,27 +480,7 @@ tbody tr:nth-child(even){
     padding: .3rem;
     
 }
-.exchat{
-    background: var(--main-color);
-    color: #fff;
-    font-size: 18px;
-    height: 40px;
-    width: 170px;
-    position: fixed;
-    right: 0;
-    bottom: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    border-radius: .5rem 0 0 .5rem;
 
-}
-.exchat span{
-   padding-top: .4rem;
-   padding-right: .2rem;
-   font-size: 19px;
-}
 .chat-header h4{
     color: #fff;
     text-align: center;

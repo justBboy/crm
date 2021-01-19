@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Asare Gideon",
+        "title": "helping with backend work",
+        "phone_number": "0542638319",
+        "company": "aimless",
+        "email": "asaregid504@gmail.com"
+    },
+    {
+        "id": 2,
+        "name": "Waja Benjamin",
+        "title": "helping with video editing",
+        "phone_number": "0593465380",
+        "company": "aimless",
+        "email": "dontknow@gmail.com"
+    },
+    {
+        "id": 3,
+        "name": "Asare Tutu",
+        "title": "helping with frontend work",
+        "phone_number": "0247506391",
+        "company": "aimless",
+        "email": "justbboyjs@gmail.com"
+    }
+]

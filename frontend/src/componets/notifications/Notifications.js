@@ -22,10 +22,10 @@ export default function Notifications({notifications}){
     })
     return (
           <>
-            {items.map(n => (
-                <NotificationElm title={n.title} body={n.body} />
+            {items.map((n, i) => (
+                <NotificationElm key={i} title={n.title} body={n.body} />
             ))}
-          </>     
+          </> 
     )
 }
 

@@ -1,30 +1,31 @@
 import React from 'react'
+import useGetTableData from '../../effects/useGetTableData'
+import { getTitles } from '../../utils'
 import Table from '../table/Table'
+import Filterer from '../utils/Filterer'
 
 
 //css
 import './Projects.css'
 
 function Projects() {
+    const tableData = useGetTableData("/static/dummyData/projects.json");
+
+    const titles = getTitles(tableData)
     return (
         <div className="main-content">
-           <h2 className="main-title">Projects</h2> 
-           <Table 
-            tableTitles={['title', 'client', 'start_date', 'end_date', 'status']} 
-            tableBody={[
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'},
-                {title:'Dummy data creator library', client: 'Gideon', start_date: '14th January 2021', end_date: '30th January 2021', status: 'Not started'}
-            ]}
+            <main>
+                   <h2 className="main-title project-title">Projects</h2> 
+                   <Filterer items={titles ? titles : []}/>
+                   <div className="project-table">
+                       <Table 
+            tableTitles={titles ? titles : []} 
+            tableBody={tableData}
            />
+                   </div>
+           
+            </main>
+        
         </div>
     )
 }

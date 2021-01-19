@@ -22,10 +22,19 @@ import ComputerIcon from '@material-ui/icons/Computer';
 import PeopleIcon from '@material-ui/icons/People';
 import PopperContainer from '../utils/popper'
 import QuickAdd from '../quickAdd/QuickAdd'
+import ChatIcon from '@material-ui/icons/Chat'
+import { Avatar, TextField } from '@material-ui/core'
+import { useDispatch } from 'react-redux'
+import { logout } from '../../slices/authSlice'
 
 function Sidebar(props) {
+const dispatch = useDispatch();
 const  [click,setClick] = useState(false);
 const handleClick = ()=>{ setClick(prev => !prev);}
+const [search, setSearch] = useState('');
+
+const handleChange = e => {setSearch(e.target.value)}
+const handleLogout = () => {dispatch(logout())}
 
     return (
         <>
@@ -35,7 +44,7 @@ const handleClick = ()=>{ setClick(prev => !prev);}
                   <h3 className="brand">
                       <span>CodingGreat</span> 
                     </h3>
-                  <label for="sidebar-toggle" className="menu" onClick={handleClick}>
+                  <label htmlFor="sidebar-toggle" className="menu" onClick={handleClick}>
                     <ListIcon className={click ? "initial": "initial"} id="list-icon"/>
                     {/* <MenuOpenIcon className={click ? "none": "initial"} id="open"  />  */}
                   </label>
@@ -106,61 +115,58 @@ const handleClick = ()=>{ setClick(prev => !prev);}
                                  <span  className="list">Clients</span>
                               </Link>
                         </li>
-                         <li>
-                             <Link to="/account">
-                                 <span>
-                                     <SettingsIcon />
-                                 </span>
-                                 <span  className="list">Account</span>
-                              </Link>
-                        </li>
-                     
+                        <li>
+                            <Link to="/exchat">
+                                <span>
+                                    <ChatIcon />
+                                </span>
+                                <span>Chat With Clients</span>
+                            </Link>
+                            </li>
                      </ul>
                  </div>
             </div> 
 
-            <div className="search-content" id={click ? "increase" : ""}>
-                <header>
+            <div className="search-content" >
+                <header className="main-header">
+                    <div>
+                            <PopperContainer trig={<NotificationsIcon />}>
+                                <Notifications 
+                                notifications={[
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'},
+                                    {title: 'hello user', body:'welcome to this nice and updatable app.'}
+                                ]}
+                                />
+                            </PopperContainer>
+                    </div>
                     <div className="search-wrapper">
-                        <span className="sh">
-                            <SearchIcon />
-                        </span>
-                        <input type="search" placeholder="Search" />
+                        <TextField label="search" value={search} onChange={handleChange}/>
                     </div>
                     <div className="social-icons">
                         <span>
                             <PopperContainer trig={<AddIcon />}>
                                 <QuickAdd 
                                 actions={[
-                                    {name: 'Event', Icon:EventNoteIcon},
-                                    {name: 'Note', Icon:NoteIcon},
-                                    {name: 'Lead', Icon:ContactsIcon},
-                                    {name: 'Task', Icon:ConfirmationNumberIcon},
-                                    {name: 'Contacts', Icon:ContactPhoneIcon},
-                                    {name: 'projects', Icon:ComputerIcon},
-                                    {name: 'clients', Icon:PeopleIcon}
+                                    {name: 'Event', Icon:EventNoteIcon, url: "/events"},
+                                    {name: 'Note', Icon:NoteIcon, url: "/notes"},
+                                    {name: 'Lead', Icon:ContactsIcon, url: "/leads"},
+                                    {name: 'Task', Icon:ConfirmationNumberIcon, url: "/tasks"},
+                                    {name: 'Contacts', Icon:ContactPhoneIcon, url: "/contacts"},
+                                    {name: 'projects', Icon:ComputerIcon, url: "/projects"},
+                                    {name: 'clients', Icon:PeopleIcon, url: "/clients"}
                                 ]}
                                 />
                             </PopperContainer>
                         </span>
-                         <span>
-                             <PopperContainer trig={<NotificationsIcon />}>
-                                 <Notifications 
-                                 notifications={[
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'},
-                                     {title: 'hello user', body:'welcome to this nice and updatable app.'}
-                                 ]}
-                                 />
-                             </PopperContainer>
-                         </span>
+                        
                          <span className="notify">
                             
                             <Link to="/chat" style={{color: "black"}}>
@@ -168,11 +174,17 @@ const handleClick = ()=>{ setClick(prev => !prev);}
                             </Link>
                         </span>
                         <div className="image">
-                            <img src={props.image} alt=""/>
+                            <PopperContainer trig={<Avatar />}>
+                                <a href="#" className="btn-lg">Change Profile Pic</a>
+                                <a href="#" className="btn-lg">Remove Profile Pic</a>
+                                <a href="#" className="btn-lg" onClick={handleLogout}>Logout</a>
+                            </PopperContainer>
                         </div>
                     </div>
                 </header>
+
             </div>
+        
         </>
     )
 }

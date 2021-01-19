@@ -1,27 +1,30 @@
 import React from 'react'
+import useGetTableData from '../../effects/useGetTableData';
+import { getTitles } from '../../utils';
 import Table from '../table/Table';
+import Filterer from '../utils/Filterer';
 
 //css
 import './Lead.css'
 
 function Lead() {
+    const tableData = useGetTableData("/static/dummyData/leads.json");
+
+    const titles = getTitles(tableData);
     return (
         <div className="main-content">
-            <h2 className="main-title">Leads</h2>
-            <Table 
-                tableTitles={['name', 'title', 'phone_number', 'company', 'email']}
-                tableBody={[
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'},
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'},
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'},
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'},
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'},
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'},
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'},
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'},
-                    {name: 'Asare', title: 'Helping with frontend work', phone_number: '+233542638319', company: 'Aimless', email: 'asaregid504@gmail.com'}
-                ]}
+            <main>
+                  <h2 className="main-title leads-title">Leads</h2>
+                  <Filterer items={titles ? titles : []}/>
+                  <div className="leads-table">
+                      <Table 
+                tableTitles={titles ? titles : []}
+                tableBody={tableData}
             />
+                  </div>
+            
+            </main>
+          
         </div>
     )
 }

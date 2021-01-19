@@ -2,6 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Popper from '@material-ui/core/Popper';
 
+
+//css
+import './Popper.css'
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     border: '1px solid',
@@ -27,7 +31,7 @@ export default function PopperContainer({children, trig}) {
       <span aria-describedby={id} type="button" onClick={handleClick}>
           {trig}
       </span>
-      <Popper id={id} open={open} placement="bottom-end" className="popper" anchorEl={anchorEl}>
+      <Popper id={id} open={open} placement="bottom-end"  className="popper" anchorEl={anchorEl}>
         <div className={classes.paper}>
             {children}
         </div>

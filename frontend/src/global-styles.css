@@ -88,3 +88,10 @@ body{
     font-weight: 800;
     margin: 30px 0;
 }
+
+.header-title{
+    color: #343;
+    font-weight: lighter;
+    font-size: 24px;
+    margin: 10px 0;
+}
